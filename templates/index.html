@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Defi-Foundry</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+<div class="header">
+  <header>
+    <nav class="nav">
+      <a class="logo" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
+        <div class="logo-text">
+          <h3>DEFI</h3>
+          <h3>FOUNDRY</h3>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+        <li><a href="#services" class="services">Services</a></li>
+        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+      </ul>
+
+      <a href="#" class="joinus">Join Us</a>
+
+      <div class="mobile-nav">
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <ul class="links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <input type="text" placeholder="Welcome to Defi Foundry">
+    <h2>Fueling the next wave of Web3 innovation</h2>
+    <p>
+      Empowering early-stage crypto startups with market-making, fundraising, and branding, backed by a thriving web3 community.
+    </p>
+    <a href="{{ url_for('startup') }}" class="apply">Apply as a Startup</a>
+    <img src="{{ url_for('static', filename='imgs/curves.png') }}" class="curves" alt="">
+  </section>
+
+  <div class="sponsors">
+    <p>Trusted by Leading Web3 Startups and Investors</p>
+    <img src="{{ url_for('static', filename='imgs/sponsors.png') }}" alt="">
+  </div>
+</div>
+
+<section class="about">
+  <img class="top-left" src="{{ url_for('static', filename='imgs/glowing-line.png') }}" alt="">
+  <img class="top-right" src="{{ url_for('static', filename='imgs/glowing-line-right.png') }}" alt="">
+  <h2>About Defi Foundry</h2>
+  <p>Defi Foundry is a web3-native launchpad and community, helping early-stage crypto projects with market-making, fundraising, creative, and more.</p>
+  <img class="bottom-left" src="{{ url_for('static', filename='imgs/glowing-line-sm.png') }}" alt="">
+  <img class="bottom-right" src="{{ url_for('static', filename='imgs/glowing-line-bottom-right.png') }}" alt="">
+</section>
+
+<section id="services">
+  <h2>Learn Our Services</h2>
+  <p class="title">Discover how we help Web3 projects grow from launch to traction</p>
+
+  <div class="service">
+    <div class="service1">
+      <h4>Fundraising & Advisory</h4>
+      <p>From refining your pitch to structuring your raise, we provide strategic guidance and investor access to help you secure funding and scale confidently.</p>
+      <span class="img-con">
+        <img src="{{ url_for('static', filename='imgs/Grph.png') }}" alt="">
+      </span>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green.png') }}" class="hover-img" alt="">
+    </div>
+
+    <div class="service2">
+      <h4>Creative branding</h4>
+      <p>From visual identity to content and design, we help Web3 projects stand out, build trust, and resonate with the right audience.</p>
+      <span class="img-con">
+        <img src="{{ url_for('static', filename='imgs/service2.png') }}" alt="">
+      </span>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green.png') }}" class="hover-img" alt="">
+    </div>
+
+    <div class="service3">
+      <h4>OTC Services</h4>
+      <p>We facilitate trusted, discreet over-the-counter deals with flexible terms for projects, investors, and strategic partners.</p>
+      <span class="img-con">
+        <img src="{{ url_for('static', filename='imgs/service3.png') }}" alt="">
+      </span>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green.png') }}" class="hover-img" alt="">
+    </div>
+
+    <div class="service4">
+      <h4>Market Making</h4>
+      <p>We craft tailored liquidity strategies that support healthy token performance, price stability, and long-term investor confidence.</p>
+      <span class="img-con">
+        <img src="{{ url_for('static', filename='imgs/service4.png') }}" alt="">
+      </span>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green.png') }}" class="hover-img" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem">
+  <div>
+    <h3>The Ecosystem We Serve</h3>
+    <p>We partner with early-stage crypto teams, DAOs, and founders ready to turn bold ideas into real-world impact.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="left">
+    <h3>Why Defi Foundry?</h3>
+    <p>Defi Foundry is a Web3 partner designed for builders. We combine execution, industry insight, and a strong community to help early-stage crypto projects grow from concept to traction. <br><br>Our full-stack approach covers market-making, fundraising, OTC deals, and creative support, empowering teams to move faster and smarter.</p>
+    <a href="#" class="get-started">Get Started</a>
+  </div>
+
+  <div class="right">
+    <div class="card1">
+      <img src="{{ url_for('static', filename='imgs/world.png') }}" alt="">
+      <h4>Community Engine</h4>
+      <p>Our network of Builders, creators and strategists is your unfair advantage. Tap into a vibrant, engaged collective that amplifies your project from day one.</p>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green 1.png') }}" class="img-hover" alt="">
+    </div>
+
+    <div class="card2">
+      <img src="{{ url_for('static', filename='imgs/rocket.png') }}" alt="">
+      <h4>Execution Centric</h4>
+      <p>We don’t just plan, we help you launch. From tokenomics to design, our team works hands-on to bring your vision to life.</p>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green.png') }}" class="img-hover" alt="">
+    </div>
+
+    <div class="card3">
+      <img src="{{ url_for('static', filename='imgs/mdi_help-outline.png') }}" alt="">
+      <h4>Full-stack Support</h4>
+      <p>We offer comprehensive Market-making, Fundraising, OTC deals and branding for in-house support designed for Web3 scale.</p>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green 2.png') }}" class="img-hover" alt="">
+    </div>
+
+    <div class="card4">
+      <img src="{{ url_for('static', filename='imgs/tabler_steam.png') }}" alt="">
+      <h4>Web3-native Team</h4>
+      <p>We offer comprehensive Market-making, Fundraising, OTC deals and branding for in-house support designed for Web3 scale.</p>
+      <img src="{{ url_for('static', filename='imgs/Ellipse 13 Green 3.png') }}" class="img-hover" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>Our Testimonials</h2>
+  <p class="title">See how real projects went from idea to momentum with our full-stack execution and guidance</p>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="card1">
+        <p>Working with Defi Foundry has been a game-changer...</p>
+        <div class="card-footer">
+          <img src="{{ url_for('static', filename='imgs/Jan.png') }}" alt="">
+          <div class="name">
+            <h5>Jan Strandberg</h5>
+            <p>Founder, Acquire.fi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add other cards similarly -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<section class="question">
+  <img class="top-left" src="{{ url_for('static', filename='imgs/glowing-line.png') }}" alt="">
+  <img class="top-right" src="{{ url_for('static', filename='imgs/glowing-line-right.png') }}" alt="">
+  <h1>Ready to scale Web3 with Confidence?</h1>
+  <p>Start with a clear vision and a team that knows how to execute...</p>
+  <a href="#"><button>Start now</button></a>
+  <img class="bottom-left" src="{{ url_for('static', filename='imgs/glowing-line-sm.png') }}" alt="">
+  <img class="bottom-right" src="{{ url_for('static', filename='imgs/glowing-line-bottom-right.png') }}" alt="">
+</section>
+
+<footer>
+  <div class="logo">
+    <a href="#">
+      <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
+      <h2>DEFI <br> FOUNDRY</h2>
+    </a>
+  </div>
+  <p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
+  <ul>
+    <li class="benefits"><a href="#">Benefits</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Testimonials</a></li>
+    <li><a href="#">FAQs</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Whitepaper</a></li>
+  </ul>
+
+  <div class="footer-bottom">
+    <div class="left"><p>© DefiFoundry 2025. All rights reserved</p></div>
+    <div class="center">
+      <img src="{{ url_for('static', filename='imgs/X.png') }}" alt="">
+      <img src="{{ url_for('static', filename='imgs/Telegrm.png') }}" alt="">
+    </div>
+    <div class="right">
+      <p>Terms of Service</p>
+      <p>Privacy & Policy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const header = document.querySelector(".nav");
+  const scrollThreshold = 50;
+  document.addEventListener('scroll', () => {
+    const top = document.documentElement.scrollTop;
+    header.classList.toggle("static", top > scrollThreshold);
+  });
+
+  let menuToggle = document.querySelector(".mobile-nav");
+  let nav = document.querySelector(".mobile-menu");
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("show");
+  };
+</script>
+
+</body>
+</html>

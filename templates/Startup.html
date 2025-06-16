@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Defi-Foundry</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+
+<div class="header">
+<header>
+<nav class="nav">
+<a class="logo" href="{{ url_for('index') }}">
+  <img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
+  <div class="logo-text">
+    <h3>DEFI</h3>
+    <h3>FOUNDRY</h3>
+  </div>
+</a>
+
+<ul class="nav-links">
+  <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+  <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+  <li><a href="#services" class="services">Services</a></li>
+  <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+</ul>
+
+<a href="#" class="joinus">Join Us</a>
+
+<div class="mobile-nav">
+  <span></span>
+</div>
+</nav>
+
+<div class="mobile-menu">
+  <ul class="links">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+  </ul>
+</div>
+</header>
+</div>
+
+<section id="startup-form">
+  <div id="con">
+    <div class="text">
+      <h2>Startup Application Form</h2>
+    </div>
+
+    <div class="form">
+      <form method="POST" action="{{ url_for('startup') }}">
+        <div class="indicator">
+          <div class="no1">
+            <p class="no">1</p>
+            <p>Project Details</p>
+          </div>
+          <div class="no2">
+            <p class="no">2</p>
+            <p>Project Metrics</p>
+          </div>
+          <div class="no3">
+            <p class="no">3</p>
+            <p>Other Details</p>
+          </div>
+        </div>
+
+        <div class="form-details">
+          <div>
+            <label for="stage">Current Stage*</label>
+            <br>
+            <select name="stage" id="stage">
+              <option value="Stage1">Stage1</option>
+              <option value="Stage2">Stage2</option>
+              <option value="Stage3">Stage3</option>
+              <option value="Stage4">Stage4</option>
+              <option value="Stage5">Stage5</option>
+            </select>
+          </div>
+          <div>
+            <label for="funds">Have you raised funds?*</label>
+            <br>
+            <select name="funds" id="funds">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div>
+            <label for="amount">If Yes: how much?</label>
+            <br>
+            <input type="text" name="amount" id="amount" placeholder="$1M">
+          </div>
+          <div>
+            <label for="users">Active users</label>
+            <br>
+            <input type="text" name="users" id="users" placeholder="0">
+          </div>
+          <div>
+            <label for="cmc">Coin market cap</label>
+            <br>
+            <input type="text" name="cmc" id="cmc" placeholder="0">
+          </div>
+          <div>
+            <label for="milestone">Key milestone</label>
+            <br>
+            <input type="text" name="milestone" id="milestone" placeholder="Raised pre-seed">
+          </div>
+        </div>
+
+        <div class="form-details2">
+          <div class="form-parent">
+            <div>
+              <label for="name">Project Name*</label>
+              <br>
+              <input name="name" id="name" type="text" placeholder="Enter Project Name">
+            </div>
+            <div>
+              <label for="email">Email address*</label>
+              <br>
+              <input type="email" name="email" id="email" placeholder="hello@example.com">
+            </div>
+          </div>
+
+          <div class="form-parent">
+            <div>
+              <label for="x">X*</label>
+              <br>
+              <input name="x" id="x" type="text" placeholder="@username">
+            </div>
+            <div>
+              <label for="telegram">Telegram (If any)</label>
+              <br>
+              <input type="text" name="telegram" id="telegram" placeholder="@username">
+            </div>
+          </div>
+
+          <div class="form-parent">
+            <div>
+              <label for="discord">Discord (If any)</label>
+              <br>
+              <input name="discord" id="discord" type="text" placeholder="@username">
+            </div>
+            <div>
+              <label for="linkedin">LinkedIn Id (If any)</label>
+              <br>
+              <input type="text" name="linkedin" id="linkedin" placeholder="@username">
+            </div>
+          </div>
+
+          <br>
+          <label for="message">Brief description</label>
+          <br>
+          <textarea name="message" id="message"></textarea>
+        </div>
+
+        <div class="form-details3">
+          <div class="form-parent">
+            <div>
+              <label for="service">What service do you need?*</label>
+              <br>
+              <select name="service" id="service">
+                <option value="Service1">Service1</option>
+                <option value="Service2">Service2</option>
+                <option value="Service3">Service3</option>
+                <option value="Service4">Service4</option>
+                <option value="Service5">Service5</option>
+              </select>
+            </div>
+            <div>
+              <label for="x_repeat">X*</label>
+              <br>
+              <input type="text" name="x_repeat" id="x_repeat" placeholder="@username">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-details4">
+          <div>
+            <label for="support">What kind of support do you need?</label>
+            <br>
+            <select name="support" id="support">
+              <option value="Support1">Support1</option>
+              <option value="Support2">Support2</option>
+              <option value="Support3">Support3</option>
+              <option value="Support4">Support4</option>
+              <option value="Support5">Support5</option>
+            </select>
+          </div>
+          <div>
+            <br>
+            <label for="why">Why are you applying to Defi Foundry?</label>
+            <br>
+            <textarea name="why" id="why"></textarea>
+          </div>
+          <div>
+            <label for="pitchdeck">Link to your pitch deck</label>
+            <br>
+            <input type="text" name="pitchdeck" id="pitchdeck" placeholder="Pitch deck (URL)">
+          </div>
+          <div>
+            <br>
+            <label for="anythingElse">Anything else we should know?</label>
+            <br>
+            <textarea name="anythingElse" id="anythingElse"></textarea>
+          </div>
+          <div>
+            <label for="hear">How did you hear about us?</label>
+            <br>
+            <select name="hear" id="hear">
+              <option value="Facebook">Facebook</option>
+              <option value="X">X</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Newsletter">Newsletter</option>
+              <option value="Discord">Discord</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="back">Back</button>
+          <button type="submit" class="continue">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">
+    <a href="#">
+      <img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
+      <h2>DEFI <br> FOUNDRY</h2>
+    </a>
+  </div>
+  <p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
+  <ul>
+    <li class="benefits"><a href="#">Benefits</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Testimonials</a></li>
+    <li><a href="#">FAQs</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Whitepaper</a></li>
+  </ul>
+  <div class="footer-bottom">
+    <div class="left">
+      <p>© DefiFoundry 2025. All rights reserved</p>
+    </div>
+    <div class="center">
+      <img src="{{ url_for('static', filename='Imgs/X.png') }}" alt="">
+      <img src="{{ url_for('static', filename='Imgs/Telegrm.png') }}" alt="">
+    </div>
+    <div class="right">
+      <p>Terms of Service</p>
+      <p>Privacy & Policy</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header = document.querySelector(".nav");
+const scrollThreshold = 50;
+
+document.addEventListener('scroll', () => {
+  const top = document.documentElement.scrollTop;
+  if (top > scrollThreshold) {
+    header.classList.add("static");
+  } else {
+    header.classList.remove("static");
+  }
+});
+
+let menuToggle = document.querySelector(".mobile-nav");
+let nav = document.querySelector(".mobile-menu");
+menuToggle.onclick = function () {
+  menuToggle.classList.toggle("active");
+  nav.classList.toggle("show");
+};
+</script>
+
+</body>
+</html>

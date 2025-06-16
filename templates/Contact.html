@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Defi-Foundry</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+<div class="header">
+  <header>
+    <nav class="nav">
+      <a class="logo" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
+        <div class="logo-text">
+          <h3>DEFI</h3>
+          <h3>FOUNDRY</h3>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+        <li><a href="{{ url_for('index') }}" class="services">Services</a></li>
+        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+      </ul>
+
+      <a href="#" class="joinus">Join Us</a>
+
+      <div class="mobile-nav">
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <ul class="links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+        <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="contact">
+    <div id="contact-us">
+      <div class="text">
+        <h2>Contact Us</h2>
+        <p>
+          Have a question, idea, or opportunity you'd like to explore with us? Whether you're a founder looking for support, a partner ready to collaborate, or simply curious about what we do, we're here to connect. Reach out and let’s start the conversation.
+        </p>
+        <a href="mailto:defifoundry@gmail.com">@defifoundry@gmail.com</a>
+      </div>
+
+      <div class="form">
+        <form action="" method="POST">
+          <div class="form-parent">
+            <div>
+              <label for="name">Full Name*</label><br>
+              <input name="name" id="name" type="text" placeholder="Enter your name">
+            </div>
+            <div>
+              <label for="company">Company Name*</label><br>
+              <input type="text" name="company" id="company" placeholder="Enter your company name">
+            </div>
+          </div>
+
+          <div class="form-parent snd">
+            <div>
+              <label for="email">Email address*</label><br>
+              <input type="email" name="email" id="email" placeholder="hello@example.com">
+            </div>
+            <div>
+              <label for="reason">Reason For Contact*</label><br>
+              <select name="reason" id="reason">
+                <option value="Reason1">Reason1</option>
+                <option value="Reason2">Reason2</option>
+                <option value="Reason3">Reason3</option>
+                <option value="Reason4">Reason4</option>
+                <option value="Reason5">Reason5</option>
+              </select>
+            </div>
+          </div>
+
+          <br>
+          <label for="message">Message*</label><br>
+          <textarea name="message" id="message" placeholder="Your message here..."></textarea>
+
+          <div class="buttons">
+            <button class="cancel" type="reset">Cancel</button>
+            <button type="submit" class="continue">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">
+      <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
+        <h2>DEFI <br> FOUNDRY</h2>
+      </a>
+    </div>
+    <p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
+    <ul>
+      <li class="benefits"><a href="#">Benefits</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Whitepaper</a></li>
+    </ul>
+
+    <div class="footer-bottom">
+      <div class="left"><p>© DefiFoundry 2025. All rights reserved</p></div>
+      <div class="center">
+        <img src="{{ url_for('static', filename='imgs/X.png') }}" alt="">
+        <img src="{{ url_for('static', filename='imgs/Telegrm.png') }}" alt="">
+      </div>
+      <div class="right">
+        <p>Terms of Service</p>
+        <p>Privacy & Policy</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+const header = document.querySelector(".nav");
+const scrollThreshold = 50;
+
+document.addEventListener('scroll', () => {
+  const top = document.documentElement.scrollTop;
+  if (top > scrollThreshold) {
+    header.classList.add("static");
+  } else {
+    header.classList.remove("static");
+  }
+});
+
+let menuToggle = document.querySelector(".mobile-nav");
+let nav = document.querySelector(".mobile-menu");
+menuToggle.onclick = function () {
+  menuToggle.classList.toggle("active");
+  nav.classList.toggle("show");
+};
+</script>
+</body>
+</html>
