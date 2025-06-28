@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Defi-Foundry</title>
-    <link rel="stylesheet" href="../Css/style.css">
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-<div class="header">
+<div class="header nobg">
 <header>
 <nav class="nav">
-<a class="logo" href="index.html">
-<img src="../Imgs/Logo.png" alt="">
+<a class="logo" href="{{ url_for('index') }}">
+<img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
 <div class="logo-text">
 <h3>DEFI</h3>
 <h3>FOUNDRY</h3>
@@ -27,13 +21,13 @@
 </a>
 
 <ul class="nav-links">
-    <li><a href="../index.html" class="home">Home</a></li>
-    <li><a href="About.html" class="about">About Us</a></li>
-    <li><a href="#services" class="services">Services</a></li>
-    <li><a href="Contact.html" class="contact">Contact</a></li>
+    <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
 </ul>
 
-<a href="#" class="joinus"> Join Us</a>
+<a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
 
 <div class="mobile-nav">
   <span></span>
@@ -42,10 +36,11 @@
 
 <div class="mobile-menu">
   <ul class="links">
-    <li><a href="../index.html" class="">Home</a></li>
-    <li><a href="About.html" class="about">About Us</a></li>
-    <li><a href="#services" class="services">Services</a></li>
-    <li><a href="Contact.html" class="contact">Contact</a></li>
+    <li><a href="{{ url_for('index') }}" class="">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+    <a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
   </ul>
 </div>
 </header>
@@ -58,7 +53,8 @@
 <p>Join a team that’s building the future of Web3 from the ground up. At Defi Foundry, we’re more than just a venture studio, we’re a collective of thinkers, designers, strategists, and engineers committed to helping early-stage crypto projects thrive. If you're passionate about innovation, collaboration, and creating real impact, we’d love to hear from you.</p>
 </div>
 
-<div class="form">
+<form class="form" method="POST" action="{{ url_for('team') }}">
+
     <div class="indicator">
     <div class="no1">
     <p class="no active">1</p>
@@ -76,20 +72,20 @@
     <span>></span>
     </div>
     </div>
-    
-<form class="form-step active">
+
+<div class="form-step active">
 
 <div class="form-details">
 <div class="form-parent">
 <div>
     <label for="name">Full Name*</label>
     <br>
-    <input name="name" id="name" type="text" placeholder="Enter Project Name">
+    <input name="name" id="name" type="text" placeholder="Enter Full Name" required>
 </div>
 <div>
     <label for="email">Email address*</label>
     <br>
-    <input type="email" name="email" id="email" placeholder="hello@example.com">
+    <input required type="email" name="email" id="email" placeholder="hello@example.com">
 </div>
 </div>
 
@@ -102,12 +98,45 @@
         <div>
       <label for="location">Location*</label>
     <br>
-    <select name="location" id="location">
-    <option value="Lagos">Lagos</option>
-    <option value="Port Harcourt">Port Harcourt</option>
-    <option value="Kwara">Kwara</option>
+    <select name="location" id="location" required>
+    <option value="">Select an option</option>
+    <option value="Abia">Abia</option>
+    <option value="Adamawa">Adamawa</option>
+    <option value="AkwaIbom">Akwa Ibom</option>
+    <option value="Anambra">Anambra</option>
+    <option value="Bauchi">Bauchi</option>
+    <option value="Bayelsa">Bayelsa</option>
+    <option value="Benue">Benue</option>
+    <option value="Borno">Borno</option>
+    <option value="CrossRiver">Cross River</option>
+    <option value="Delta">Delta</option>
+    <option value="Ebonyi">Ebonyi</option>
+    <option value="Edo">Edo</option>
     <option value="Ekiti">Ekiti</option>
+    <option value="Enugu">Enugu</option>
+    <option value="Gombe">Gombe</option>
+    <option value="Imo">Imo</option>
+    <option value="Jigawa">Jigawa</option>
+    <option value="Kaduna">Kaduna</option>
+    <option value="Kano">Kano</option>
+    <option value="Kastina">Kastina</option>
     <option value="Kebbi">Kebbi</option>
+    <option value="Kogi">Kogi</option>
+    <option value="Kwara">Kwara</option>
+    <option value="Lagos">Lagos</option>
+    <option value="Nassarawa">Nassarawa</option>
+    <option value="Niger">Niger</option>
+    <option value="Ogun">Ogun</option>
+    <option value="Ondo">Ondo</option>
+    <option value="Osun">Osun</option>
+    <option value="Oyo">Oyo</option>
+    <option value="Plateau">Plateau</option>
+    <option value="Rivers">Rivers</option>
+    <option value="Sokoto">Sokoto</option>
+    <option value="Taraba">Taraba</option>
+    <option value="Yobe">Yobe</option>
+    <option value="Zamfara">Zamfara</option>
+    <option value="Abuja">Abuja</option>
 </select>
 </div>
 </div>
@@ -116,7 +145,7 @@
 <div>
     <label for="x">X*</label>
     <br>
-    <input name="x" id="x" type="text" placeholder="@username">
+    <input name="x" id="x" type="text" placeholder="@username" required>
 </div>
 <div>
     <label for="telegram">Telegram (If any)</label>
@@ -127,7 +156,7 @@
 
 <div class="form-parent">
 <div>
-    <label for="name">Discord (If any)</label>
+    <label for="discord">Discord (If any)</label>
     <br>
     <input name="discord" id="discord" type="text" placeholder="@username">
 </div>
@@ -137,24 +166,20 @@
     <input type="text" name="linkedin" id="linkedin" placeholder="@username">
 </div>
 </div>
-<div class="buttons">
-    <span></span>
-    <button type="submit" class="continue">Continue</button>
 </div>
 </div>
-</form>
 
-<form class="form-step">
+<div class="form-step">
     <div class="form-details2">
         <div>
       <label for="role">What role are you applying for?*</label>
     <br>
-    <select name="role" id="role">
-    <option value="Role1">Role</option>
-    <option value="Role2">Role2</option>
-    <option value="Role3">Role3</option>
-    <option value="Role4">Role4</option>
-    <option value="Role5">Role5</option>
+    <select name="role" id="role" required>
+    <option value="">Select an option</option>
+    <option value="GraphicDesigner">Graphic Designer</option>
+    <option value="ContentCreator">Content Creator</option>
+    <option value="Analyst">Analyst</option>
+    <option value="Researcher">Researcher</option>
     </select>
 </div>
 
@@ -162,44 +187,40 @@
 <div>
     <label for="skills">Skills*</label>
     <br>
-    <input name="skills" id="skills" type="text" placeholder="Enter skills">
+    <input name="skills" id="skills" type="text" placeholder="Enter skills" required>
 </div>
 <div>
-    <label for="email">Years of Experience*</label>
+    <label for="Years">Years of Experience*</label>
     <br>
-    <input type="email" name="email" id="email" placeholder="hello@example.com">
+    <input type="text" name="Years" id="Years" placeholder="2 Years" required>
 </div>
 </div>
 
 <div>
     <label for="duration">How long do you want to work with us?*</label>
     <br>
-    <select name="duration" id="duration">
-    <option value="1 Year">1 Year</option>
-    <option value="2 Years">2 Years</option>
-    <option value="3 Years">3 Years</option>
-    <option value="4 Years">4 Years</option>
-    <option value="5 Years">5 Years</option>
+    <select name="duration" id="duration" required>
+    <option value="">Select an option</option>
+    <option value="1Year">1 Year</option>
+    <option value="2Years">2 Years</option>
+    <option value="3Years">3 Years</option>
+    <option value="4Years">4 Years</option>
+    <option value="5Years">5 Years</option>
 </select>
 </div>
-
-<div class="buttons">
-    <button class="back">Back</button>
-    <button type="submit" class="continue">Continue</button>
-</div>
 </div>
 
 
-</form>
+</div>
 
-<form class="form-step">
+<div class="form-step">
     <div class="form-details3">
         <div>
             <label for="whyus">Why do you want to work with us?*</label>
             <br>
-            <textarea name="whyus" id="whyus"></textarea>
+            <textarea name="whyus" id="whyus" required></textarea>
         </div>
-        
+
         <div>
             <label for="what">What excites you about Web3/Crypto?</label>
             <br>
@@ -209,49 +230,53 @@
 <div>
 <label for="what">What would you bring to the team that's hard to find?*</label>
 <br>
-<textarea name="what" id="what"></textarea>
+<textarea name="what" id="what" required></textarea>
 </div>
 
+
+</div>
+</div>
 
 <div class="buttons">
     <button class="back">Back</button>
-    <button type="submit" class="continue">Submit</button>
+    <button type="submit" class="continue">Continue</button>
 </div>
-</div>
+
 </form>
-
-
-</div>
 </div>
 </section>
 
 <footer>
 <div class="logo">
-<a href="">
-<img src="../Imgs/Logo.png" alt="">
+<a href="{{ url_for('index') }}">
+<img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
 <h2>DEFI <br> FOUNDRY</h2>
 </a>
 </div>
 <p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
 <ul>
-<li class="benefits"><a href="">Benefits</a></li>
-<li><a href="">About</a></li>
-<li><a href="">Testimonials</a></li>
-<li><a href="">FAQs</a></li>
-<li><a href="">Contact Us</a></li>
-<li><a href="">Whitepaper</a></li>
+<li><a href="{{ url_for('about') }}">About</a></li>
+<li><a href="{{ url_for('index') }}#faq">FAQs</a></li>
+<li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+<li><a href="{{ url_for('whitepaper') }}">Whitepaper</a></li>
 </ul>
 
-<!-- <hr> -->
 <div class="footer-bottom">
 <div class="left"><p> © DefiFoundry 2025. All rights reserved </p></div>
 <div class="center">
-<img src="../Imgs/X.png" alt="">
-<img src="../Imgs/Telegrm.png" alt="">
+<a href="https://x.com/DefiFoundry">
+  <img src="{{ url_for('static', filename='Imgs/X.png') }}" alt="">
+</a>
+<a href="https://t.me/+Gb-Z6xLUZQplOTc8">
+  <img src="{{ url_for('static', filename='Imgs/Telegrm.png') }}" alt="">
+</a>
+<a href="https://www.linkedin.com/in/james-otokpa-253845279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+  <img src="{{ url_for('static', filename='Imgs/linkedin.png') }}" alt="">
+</a>
 </div>
 <div class="right">
-<p>Terms of Service</p>
-<p>Privacy & Policy</p>
+<a href="{{ url_for('terms_of_service') }}">Terms of Service</a>
+<a href="{{ url_for('privacy_policy') }}">Privacy & Policy</a>
 </div>
 </div>
 </footer>
@@ -266,54 +291,84 @@ document.addEventListener('scroll', () => {
 {
     header.classList.add("static");
 }
-    
-else 
+
+else
 {
     header.classList.remove("static");
 }
 });
 
 let menuToggle = document.querySelector(".mobile-nav");
+let menuToggleLinks = document.querySelectorAll(".mobile-menu ul li a");
 let nav = document.querySelector(".mobile-menu");
 menuToggle.onclick = function() {
   menuToggle.classList.toggle("active");
   nav.classList.toggle("show");
 }
 
+menuToggleLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("show");
+  })
+})
+
 const steps = document.querySelectorAll(".form-step");
 const indicators = document.querySelectorAll(".no");
-const nextBtns = document.querySelectorAll(".continue");
-const backBtns = document.querySelectorAll(".back");
+const nextBtns = document.querySelector(".continue");
+const backBtns = document.querySelector(".back");
+const multiStepForm = document.querySelector(".form");
 
 let currentStep = 0;
 
 function showStep(index) {
     steps.forEach((step, i) => {
         step.classList.toggle("active", i === index);
+        backBtns.style.display = index > 0 ? "block" : "none";
+        nextBtns.textContent = index === steps.length - 1 ? "Submit" : "Continue";
         indicators[i].classList.toggle("active", i === index);
     });
 }
 
-nextBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-        if (currentStep < steps.length - 1) {
-            e.preventDefault();
-            currentStep++;
-            showStep(currentStep);
-        }
-    });
-});
 
-backBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+    nextBtns.addEventListener("click", (e) => {
+        const currentForm = steps[currentStep];
+        const requiredInputs = Array.from(currentForm.querySelectorAll('[required]')).filter(input => input.offsetParent !== null);
+        let allValid = true;
+        requiredInputs.forEach(input => {
+           if (!input.checkValidity()) {
+            allValid = false;
+           }
+        });
+        if (!allValid) {
+            const firstInvalid = requiredInputs.find(input => !input.checkValidity());
+            if (firstInvalid) {
+                firstInvalid.reportValidity();
+                firstInvalid.focus();
+            }
+            return;
+        }
+
+        if (currentStep === steps.length - 1) {
+
+            multiStepForm.submit();
+            currentStep = 0;
+            showStep(currentStep);
+            return;
+        }
+
+        currentStep++;
+        showStep(currentStep)
+    });
+
+
+backBtns.addEventListener("click", (e) => {
         if (currentStep > 0) {
             e.preventDefault()
             currentStep--;
             showStep(currentStep);
         }
     });
-});
-
 </script>
 </body>
 </html>

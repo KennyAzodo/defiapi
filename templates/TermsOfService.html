@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defi-Foundry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+</head>
+<body>
+<div class="header nobg">
+<header>
+<nav class="nav">
+<a class="logo" href="{{ url_for('index') }}">
+<img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
+<div class="logo-text">
+<h3>DEFI</h3>
+<h3>FOUNDRY</h3>
+</div>
+</a>
+
+<ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+</ul>
+
+<a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
+
+<div class="mobile-nav">
+  <span></span>
+</div>
+</nav>
+
+<div class="mobile-menu">
+  <ul class="links">
+    <li><a href="{{ url_for('index') }}" class="">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+    <a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
+  </ul>
+</div>
+</header>
+
+<section id="terms-of-service">
+<div class="hero">
+<h2>Terms Of Service</h2>
+</div>
+
+<div class="content">
+<div>
+<h3>Introduction</h3>
+<p>
+Welcome to DeFi Foundry. These Terms of Service (“Terms”, “Agreement”) govern your access to and use of the DeFi Foundry website, platform, services, and any associated content (collectively, the “Services”) provided by DeFi Foundry (“we”, “us”, or “our”). By accessing or using our Services, you agree to be bound by these Terms.
+<br>
+If you do not agree with these Terms, please do not use our Services.
+</p>
+</div>
+
+<div>
+<h3>1. Overview</h3>
+<p>
+DeFi Foundry is a Web3 venture studio that supports early-stage crypto projects with strategic guidance, product design, community development, and other innovation-enabling services. These Terms apply to all visitors, startups, contributors, users, partners, and others who access or use our platform.
+</p>
+</div>
+
+<div>
+<h3>2. Eligibility</h3>
+<p>
+By using our Services, you confirm that:
+</p>
+<ul>
+<li>You are at least 18 years old.</li>
+<li>You are not a citizen or resident of a jurisdiction where access to DeFi Foundry is prohibited.</li>
+<li>You have the legal capacity to enter into a binding agreement.</li>
+</ul>
+
+</div>
+
+
+<div>
+<h3>3. Use Of Services</h3>
+<p>
+You agree to use the Services only for lawful purposes and in accordance with these Terms. You may not:
+</p>
+
+<ul>
+<li>Interfere with the operation of our Services.</li>
+<li>Attempt to access areas or features you’re not authorized to.</li>
+<li>Copy, reproduce, or exploit any part of the platform without prior written consent.</li>
+
+</ul>
+
+</div>
+
+<div>
+<h3>4. Startup Applications and Team Contributions</h3>
+<p>
+If you apply as a startup, you may be asked to provide company details, metrics, and relevant documents. You warrant that all information submitted is accurate and up to date.
+<br>
+If you apply to join our team, you may be asked to provide qualifications, experience, and preferences. We reserve the right to accept or reject any application at our sole discretion.</p>
+
+</div>
+
+<div>
+<h3>5. Intellectual Property</h3>
+<p>All content on our platform, including but not limited to logos, design assets, copy, layouts, and original tools, is the intellectual property of DeFi Foundry or its licensors. You may not use, reproduce, or distribute any material without explicit permission.</p>
+</div>
+
+<div>
+<h3>6. Third-Party Links</h3>
+<p>Our Services may contain links to third-party websites or tools. We do not control or endorse these websites and are not responsible for their content, policies, or practices. Your use of third-party platforms is at your own risk.</p>
+
+</div>
+
+<div>
+<h3>7. Disclaimer of Warranties</h3>
+<p>Our Services are provided on an “as is” and “as available” basis. DeFi Foundry does not guarantee:</p>
+
+<ul>
+<li>The Services will be uninterrupted or error-free.</li>
+<li>The accuracy or reliability of information or outcomes from using the Services.</li>
+<li>That the platform is free of viruses or harmful components.</li>
+</ul>
+
+</div>
+
+
+<div>
+<h3>8. Limitation of Liability</h3>
+<p>To the maximum extent permitted by law, DeFi Foundry and its affiliates shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from:</p>
+
+<ul>
+<li>Your use or inability to use the Services.</li>
+<li>Any unauthorized access to or use of our servers or data.</li>
+<li>Any bugs, viruses, or harmful materials transmitted via our Services.</li>
+</ul>
+
+</div>
+
+
+<div>
+<h3>9. Privacy</h3>
+<p>Your use of the Services is also governed by our <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>, which outlines how we collect, use, and protect your personal information.</p>
+
+</div>
+
+<div>
+<h3>10. Modifications</h3>
+<p>We may update these Terms from time to time. If we make material changes, we will notify you by updating the “Effective Date” or through other communication methods. Continued use of the Services after such updates constitutes acceptance of the revised Terms.</p>
+
+</div>
+
+<div>
+<h3>11. Termination</h3>
+<p>We reserve the right to suspend or terminate your access to the Services at any time, without notice, if we believe you have violated these Terms.</p>
+
+</div>
+
+<div>
+<h3>12. Governing Law</h3>
+<p>These Terms shall be governed by and construed in accordance with the laws of [Your Country/Region], without regard to its conflict of law principles.</p>
+
+</div>
+
+<div>
+<h3>13. Contact Us</h3>
+<p>For any questions or concerns regarding these Terms, please contact us at:</p>
+
+ <a href="mailto:defifoundry@gmail.com">📧 defifoundry@gmail.com </a>
+ <br>
+ <a href="https://defifoundry.xyz">🌍 https://defifoundry.xyz </a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<div class="logo">
+<a href="{{ url_for('index') }}">
+<img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
+<h2>DEFI <br> FOUNDRY</h2>
+</a>
+</div>
+<p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
+<ul>
+<li><a href="{{ url_for('about') }}">About</a></li>
+<li><a href="{{ url_for('index') }}#faq">FAQs</a></li>
+<li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+<li><a href="{{ url_for('whitepaper') }}">Whitepaper</a></li>
+</ul>
+
+<div class="footer-bottom">
+<div class="left"><p> © DefiFoundry 2025. All rights reserved </p></div>
+<div class="center">
+<a href="https://x.com/DefiFoundry">
+  <img src="{{ url_for('static', filename='Imgs/X.png') }}" alt="">
+</a>
+<a href="https://t.me/+Gb-Z6xLUZQplOTc8">
+  <img src="{{ url_for('static', filename='Imgs/Telegrm.png') }}" alt="">
+</a>
+<a href="https://www.linkedin.com/in/james-otokpa-253845279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+  <img src="{{ url_for('static', filename='Imgs/linkedin.png') }}" alt="">
+</a>
+</div>
+<div class="right">
+<a href="{{ url_for('terms_of_service') }}">Terms of Service</a>
+<a href="{{ url_for('privacy_policy') }}">Privacy & Policy</a>
+</div>
+</div>
+</footer>
+
+<script>
+const header = document.querySelector(".nav");
+const scrollThreshold = 50;
+
+document.addEventListener('scroll', () => {
+    const top = document.documentElement.scrollTop;
+    if(top > scrollThreshold)
+{
+    header.classList.add("static");
+}
+
+else
+{
+    header.classList.remove("static");
+}
+});
+
+let menuToggle = document.querySelector(".mobile-nav");
+let menuToggleLinks = document.querySelectorAll(".mobile-menu ul li a");
+let nav = document.querySelector(".mobile-menu");
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle("active");
+  nav.classList.toggle("show");
+}
+
+menuToggleLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("show");
+  })
+})
+</script>
+</body>
+</html>

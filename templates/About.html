@@ -1,183 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Defi-Foundry</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defi-Foundry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-<div class="header">
-  <header>
-    <nav class="nav">
-      <a class="logo" href="{{ url_for('index') }}">
-        <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
-        <div class="logo-text">
-          <h3>DEFI</h3>
-          <h3>FOUNDRY</h3>
-        </div>
-      </a>
+<div class="header nobg">
+<header>
+<nav class="nav">
+<a class="logo" href="{{ url_for('index') }}">
+<img src="{{ url_for('static', filename='Imgs/Logo.png') }}" alt="">
+<div class="logo-text">
+<h3>DEFI</h3>
+<h3>FOUNDRY</h3>
+</div>
+</a>
 
-      <ul class="nav-links">
-        <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
-        <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
-        <li><a href="{{ url_for('index') }}" class="services">Services</a></li>
-        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
-      </ul>
+<ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+</ul>
 
-      <a href="#" class="joinus"> Join Us</a>
-      <div class="mobile-nav"><span></span></div>
-    </nav>
+<a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
 
-    <div class="mobile-menu">
-      <ul class="links">
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
-        <li><a href="{{ url_for('index') }}" class="services">Services</a></li>
-        <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+<div class="mobile-nav">
+  <span></span>
+</div>
+</nav>
 
-  <div class="wrapper">
-    <div class="side-bar">
-      <a href="#about">About</a>
-      <a href="#the-goal">The Goal</a>
-      <a href="#the-approach">The Approach</a>
-      <a href="#why-approach">Why This Approach</a>
-      <a href="#team">Meet Our Team</a>
-    </div>
+<div class="mobile-menu">
+  <ul class="links">
+    <li><a href="{{ url_for('index') }}" class="">Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="about">About Us</a></li>
+    <li><a href="{{ url_for('index') }}#services" class="services">Services</a></li>
+    <li><a href="{{ url_for('contact') }}" class="contact">Contact</a></li>
+    <a href="{{ url_for('team') }}" class="joinus"> Join Us</a>
+  </ul>
+</div>
+</header>
+<div class="wrapper">
 
-    <div class="con">
-      <section id="about">
-        <h3>About Defi Foundry</h3>
-        <p>
-          Defi Foundry is more than just a Web3 service provider...
-        </p>
-      </section>
+<div class="side-bar">
+<a class="highlight" href="#about">About</a>
+<a class="highlight" href="#the-goal">The Goal</a>
+<a class="highlight" href="#the-approach">The Approach</a>
+<a class="highlight" href="#why-approach">Why This Approach</a>
+<a class="highlight" href="#team">Meet Our Team</a>
+</div>
 
-      <section id="the-goal">
-        <h3>The Goal</h3>
-        <p>
-          At Defi Foundry, our goal is clear: to empower the next generation...
-        </p>
-      </section>
+<div class="con">
+<section id="about">
+<h3>About Defi Foundry</h3>
+<p>
+Defi Foundry is more than just a Web3 service provider, we’re a team of builders who understand what it takes to go from zero to traction.
+<br> <br>
+We’ve been on the inside of early-stage startups, felt the pressure of fundraising, launched in volatile markets, and shipped when the odds were stacked.
+<br> <br>
+We work closely with crypto teams from the earliest days, offering not just strategy and capital, but hands-on support across market-making, token design, fundraising, and go-to-market planning.
+</p>
+</section>
 
-      <section id="the-approach">
-        <h3>The Approach</h3>
-        <p>
-          We take a full-stack approach to helping founders...
-        </p>
-      </section>
+<section id="the-goal">
+<h3>The Goal</h3>
+<p>
+At Defi Foundry, our goal is clear: to empower the next generation of Web3 founders by providing them with the strategic, creative, and operational support they need to build real, lasting impact.
+<br> <br>
+We believe early-stage crypto startups deserve more than capital or theory. They need hands-on partners who understand the complexities of the space, the urgency of momentum, and the value of long-term thinking. That’s where we come in.
+</p>
+</section>
 
-      <section id="why-approach">
-        <h3>Why This Approach</h3>
-        <p>
-          Because good ideas die without good execution...
-        </p>
-      </section>
+<section id="the-approach">
+<h3>The Approach</h3>
+<p>
+We take a full-stack approach to helping founders — one that blends strategy, execution, and creativity. From fundraising and market-making to branding, positioning, and product storytelling, our team embeds deeply into projects we believe in. We act as a strategic extension of your team, filling the critical gaps that early-stage teams often face. 
+<br> <br>
+Our network spans investors, community builders, designers, and developers — all aligned around one thing: helping you gain traction. Whether you're still shaping your pitch or preparing for launch, our model adapts to your stage and scale.
+</p>
+</section>
 
-      <section id="team">
-        <h3>Meet Our Team</h3>
-        <p class="title">
-          Seasoned experts united by a shared vision of Web3's transformative potential.
-        </p>
-        <div class="cards">
-          <div class="card-1">
-            <img src="{{ url_for('static', filename='imgs/Jan.png') }}" alt="">
-            <h4>Ogunsami David</h4>
-            <h5>Founder & CEO</h5>
-            <p>Former blockchain architect at leading fintech companies with 10+ years in distributed systems.</p>
-          </div>
-          <div class="card-2">
-            <img src="{{ url_for('static', filename='imgs/Kael.png') }}" alt="">
-            <h4>Ogunsami David</h4>
-            <h5>Founder & CEO</h5>
-            <p>Former blockchain architect at leading fintech companies with 10+ years in distributed systems.</p>
-          </div>
-          <div class="card-3">
-            <img src="{{ url_for('static', filename='imgs/Kael2.png') }}" alt="">
-            <h4>Ogunsami David</h4>
-            <h5>Founder & CEO</h5>
-            <p>Former blockchain architect at leading fintech companies with 10+ years in distributed systems.</p>
-          </div>
-        </div>
-      </section>
+<section id="why-approach">
+<h3>Why This Approach</h3>
+<p>
+Because good ideas die without good execution. The Web3 space moves fast, and founders can’t afford to waste time on fragmented advice or one-size-fits-all solutions. Our approach is built on experience, from launching our own ventures to supporting dozens of teams at critical moments.
+<br> <br>
+We’ve seen what works and what doesn’t. By offering a tightly integrated mix of support, capital, creative, and community, we help teams avoid common pitfalls, accelerate learning curves, and focus on what matters most: building something people actually want.
+</p>
+</section>
 
-      <a href="#" class="join">Join Our Journey</a>
-    </div>
-  </div>
+<section id="team">
+<h3>Meet Our Team</h3>
+<p class="title">
+Seasoned experts united by a shared vision of Web3's transformative potential.
+</p>
+<div class="cards">
+<div class="card-1">
+<img src="{{ url_for('static', filename='Imgs/Machala.png') }}" alt="">
+<h4>Machala</h4>
+<h5>Founder & CEO</h5>
+<p>Founder of DeFi Foundry, scaling and funding Web3 startups with a 300+ team focused on real traction and lasting impact.</p>
+</div>
+<div class="card-2">
+<img src="{{ url_for('static', filename='Imgs/Alusi.png') }}" alt="">
+<h4>Alusi</h4>
+<h5>Co-Founder</h5>
+<p>Blockchain developer with 4 years experience in solidity development. cybersecurity practitioner; AI and cloud security.</p>
+</div>
+</div>
+</section>
+<a href="{{ url_for('startup') }}" class="join">
+Join Our Journey
+</a>
+</div>
 
-  <footer>
-    <div class="logo">
-      <a href="#">
-        <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="">
-        <h2>DEFI <br> FOUNDRY</h2>
-      </a>
-    </div>
-    <p class="title">Empower Your Crypto Project With The Support To Scale Faster</p>
-    <ul>
-      <li class="benefits"><a href="#">Benefits</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Testimonials</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Whitepaper</a></li>
-    </ul>
+</div>
 
-    <div class="footer-bottom">
-      <div class="left"><p>© DefiFoundry 2025. All rights reserved</p></div>
-      <div class="center">
-        <img src="{{ url_for('static', filename='imgs/X.png') }}" alt="">
-        <img src="{{ url_for('static', filename='imgs/Telegrm.png') }}" alt="">
-      </div>
-      <div class="right">
-        <p>Terms of Service</p>
-        <p>Privacy & Policy</p>
-      </div>
-    </div>
-  </footer>
+<script>
+const header = document.querySelector(".nav");
+const scrollThreshold = 50;
 
-  <script>
-    const header = document.querySelector(".nav");
-    const scrollThreshold = 50;
+document.addEventListener('scroll', () => {
+    const top = document.documentElement.scrollTop;
+    if(top > scrollThreshold)
+{
+    header.classList.add("static");
+}
 
-    document.addEventListener('scroll', () => {
-      const top = document.documentElement.scrollTop;
-      if (top > scrollThreshold) {
-        header.classList.add("static");
-      } else {
-        header.classList.remove("static");
-      }
+else
+{
+    header.classList.remove("static");
+}
+});
+
+let menuToggle = document.querySelector(".mobile-nav");
+let menuToggleLinks = document.querySelectorAll(".mobile-menu ul li a");
+let nav = document.querySelector(".mobile-menu");
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle("active");
+  nav.classList.toggle("show");
+}
+
+menuToggleLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("show");
+  })
+})
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".highlight");
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+  if (entry.isIntersecting) {
+    navLinks.forEach((link) => {
+      link.classList.toggle("scrollspy",
+        link.getAttribute("href") === `#${entry.target.id}`
+      );
     });
+  }
+ })
+ 
+},
+{
+  root: null,
+  threshold: 
+  0.8,
+}
+);
 
-    let menuToggle = document.querySelector(".mobile-nav");
-    let nav = document.querySelector(".mobile-menu");
-    menuToggle.onclick = function () {
-      menuToggle.classList.toggle("active");
-      nav.classList.toggle("show");
-    }
-
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".side-bar a");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
-            link.classList.toggle("scrollspy",
-              link.getAttribute("href") === `#${entry.target.id}`
-            );
-          });
-        }
-      });
-    }, { threshold: 0.8 });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  </script>
+sections.forEach((section) => {
+  observer.observe(section);
+});
+</script>
 </body>
 </html>

@@ -43,58 +43,72 @@
 </div>
 </header>
 
-<section id="contact">
-<div id="contact-us">
-<div class="text">
-<h2>Contact Us</h2>
-<p>Have a question, idea, or opportunity you'd like to explore with us? Whether you're a founder looking for support, a partner ready to collaborate, or simply curious about what we do, we're here to connect. Reach out and let’s start the conversation.</p>
-<a href="mailto:defifoundry@gmail.com">
-@defifoundry@gmail.com
-</a>
+<section id="whitepaper">
+<div class="hero">
+<h2>Whitepaper</h2>
 </div>
 
-<div class="form">
-<form action="{{ url_for('contact') }}" method="post">
-<div class="form-parent">
+<div class="content">
 <div>
-    <label for="name">Full Name*</label>
-    <br>
-    <input name="name" id="name" type="text" placeholder="Enter your name" required>
+<h3>About Defi Foundry</h3>
+<p>
+Defi Foundry is a Web3 venture studio built to help early-stage crypto startups go from 0 to live. We provide hands-on execution support across strategy, product, design, fundraising, tokenomics, and go-to-market. Whether you're launching your first product or refining your token model, we bring deep expertise, clear process, and a strong network to help you move fast and build right.
+</p>
 </div>
-<div>
-    <label for="company">Company Name*</label>
-    <br>
-    <input type="text" name="company" id="company" placeholder="Enter your name" required>
-</div>
-</div>
-<div class="form-parent snd">
-<div>
-    <label for="email">Email address*</label>
-    <br>
-    <input type="email" name="email" id="email" placeholder="hello@example.com" required>
-</div>
-<div>
-    <label for="reason">Reason For Contact*</label>
-    <br>
-    <select name="reason" id="reason" required>
-    <option value="">Select an option</option>
-    <option value="Partnership">Partnership</option>
-    <option value="Enquiry">Enquiry</option>
-    </select>
-</div>
-</div>
-<br>
-<label for="message">Message*</label>
-<br>
-<textarea name="message" id="message" required></textarea>
 
-<div class="buttons">
-<span></span>
-<button type="submit" class="continue">Continue</button>
+<div>
+<h3>The Problems</h3>
+<p>
+Web3 builders often face fragmented support bouncing between agencies, freelancers, and investors without a clear path forward. Execution suffers. Timelines stretch. Vision gets diluted.
+Early-stage teams need more than advice. They need committed partners who can think, build, and scale with them.
+</p>
 </div>
-</form>
+
+<div>
+<h3>Our Solution</h3>
+<p>
+Defi Foundry combines strategy and execution under one roof. We help projects:
+</p>
+<ul>
+<li>Design smarter token economies</li>
+<li>Launch investor-ready brands and platforms</li>
+<li>Plan market entries with confidence</li>
+<li>Build communities that stick</li>
+<li>Raise capital with clarity and conviction</li>
+</ul>
+
 </div>
+
+<div>
+<h3>Our Process</h3>
+<p>
+Apply – Submit your startup for consideration <br> <br>
+Align – We meet, learn your vision, and shape a custom path <br> <br>
+Build – Our team works closely with yours to execute, iterate, and launch <br> <br>
+Scale – We support you through growth, capital raise, and user traction
+</p>
 </div>
+
+<div>
+<h3>Who We Work With</h3>
+<p>
+We support founders at the earliest stages — pre-launch, MVP-ready, or seed-stage. If you’ve got a strong idea, a team, and the drive to build something meaningful in Web3, you’re in the right place.
+</p>
+</div>
+
+<div>
+<h3>Ready to Build?</h3>
+<p>
+Apply now to join the next batch of projects we’re supporting.
+<br>
+Let’s take your idea from pitch deck to protocol, the right way.
+</p>
+</div>
+
+<a href="{{ url_for('startup') }}" class=""><button>Apply Now</button></a>
+
+</div>
+
 </section>
 
 <footer>
