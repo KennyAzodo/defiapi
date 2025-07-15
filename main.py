@@ -8,7 +8,7 @@ from sqlalchemy.exc import SQLAlchemyError
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = (
     'postgresql://postgres_db_xog9_user:MpW7ziWG1uqIpn9dHsp8jdeRmftDgjSN'
-    '@dpg-d1r5cq2dbo4c73e7740g-a.oregon-postgres.render.com:5432/postgres_db_xog9'
+    '@dpg-d1r5cq2dbo4c73e7740g-a/postgres_db_xog9'
 )
 db = SQLAlchemy(app)
 api = Api(app)
