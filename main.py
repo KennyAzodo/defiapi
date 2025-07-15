@@ -6,7 +6,8 @@ from sqlalchemy.exc import SQLAlchemyError
 
 # Initialize Flask app and extensions
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///defifoundry.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = ('postgresql://postgres:TjAYGJfvOnDtOsoAwecwwHqjadfpzFPP@postgres.railway'
+                                         '.internal:5432/railway')
 db = SQLAlchemy(app)
 api = Api(app)
 
