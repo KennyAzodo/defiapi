@@ -6,8 +6,10 @@ from sqlalchemy.exc import SQLAlchemyError
 
 # Initialize Flask app and extensions
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = ('postgresql://postgres:TjAYGJfvOnDtOsoAwecwwHqjadfpzFPP@postgres.railway'
-                                         '.internal:5432/railway')
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    'postgresql://postgres_db_xog9_user:MpW7ziWG1uqIpn9dHsp8jdeRmftDgjSN'
+    '@dpg-d1r5cq2dbo4c73e7740g-a.oregon-postgres.render.com:5432/postgres_db_xog9'
+)
 db = SQLAlchemy(app)
 api = Api(app)
 
